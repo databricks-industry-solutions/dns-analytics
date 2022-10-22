@@ -1,4 +1,9 @@
 # Databricks notebook source
+# MAGIC %md 
+# MAGIC You may find this series of notebooks at https://github.com/databricks-industry-solutions/dns-analytics. For more information about this solution accelerator, visit https://www.databricks.com/solutions/accelerators/threat-detection.
+
+# COMMAND ----------
+
 # MAGIC %md
 # MAGIC # 4. ML Training and Analytics
 # MAGIC In this section we will build the DGA model and the typosquatting model. Slides below have some high level discussion on DGA.  

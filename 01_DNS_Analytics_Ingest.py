@@ -1,4 +1,9 @@
 # Databricks notebook source
+# MAGIC %md 
+# MAGIC You may find this series of notebooks at https://github.com/databricks-industry-solutions/dns-analytics. For more information about this solution accelerator, visit https://www.databricks.com/solutions/accelerators/threat-detection.
+
+# COMMAND ----------
+
 # MAGIC %scala
 # MAGIC displayHTML("""<iframe src="https://drive.google.com/file/d/1ZMu8nFMuCzPZonOJmib8TpFR9JNypS0L/preview" frameborder="0" height="480" width="640"></iframe>
 # MAGIC """)

@@ -1,4 +1,9 @@
 # Databricks notebook source
+# MAGIC %md 
+# MAGIC You may find this series of notebooks at https://github.com/databricks-industry-solutions/dns-analytics. For more information about this solution accelerator, visit https://www.databricks.com/solutions/accelerators/threat-detection.
+
+# COMMAND ----------
+
 # MAGIC %md
 # MAGIC # 5. Near Realtime Streaming Analytics
 # MAGIC Enrich data with threat intel and Detect malicious activity in real-time using the analytics and enrichments 

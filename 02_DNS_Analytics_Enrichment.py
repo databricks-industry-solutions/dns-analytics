@@ -1,4 +1,9 @@
 # Databricks notebook source
+# MAGIC %md 
+# MAGIC You may find this series of notebooks at https://github.com/databricks-industry-solutions/dns-analytics. For more information about this solution accelerator, visit https://www.databricks.com/solutions/accelerators/threat-detection.
+
+# COMMAND ----------
+
 # MAGIC %md
 # MAGIC # 2. Loading the data
 # MAGIC We admit, that felt like a lot of work to prep URLHaus and dnstwist. But we are now ready for typosquatting detection and threat intel enrichment. 
