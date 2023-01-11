@@ -119,6 +119,9 @@ dns_stream_iocs = spark.sql("Select * from dns_latest_stream  where isioc = 'ioc
 
 # COMMAND ----------
 
+# let it execute for 10 more minutes
+import time
+time.sleep(600)
 # Please stop all your streams before you go.  This will ensure clusters can timeout and shutdown after class.
 for s in spark.streams.active:
   s.stop()
