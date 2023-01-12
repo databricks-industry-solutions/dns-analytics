@@ -1,0 +1,214 @@
+guid: 7b5571e6-6662-480e-bb49-194a080a2180
+liveboard:
+  name: DNS Threat Detection Liveboard
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Top 25 threat Domains by Country
+      tables:
+      - id: silver_dns
+        name: silver_dns
+      search_query: "[count] top 25 [country] [domain_name]"
+      answer_columns:
+      - name: Total count
+      - name: domain_name
+      - name: country
+      table:
+        table_columns:
+        - column_id: country
+          show_headline: false
+        - column_id: domain_name
+          show_headline: false
+        - column_id: Total count
+          show_headline: false
+        ordered_column_ids:
+        - country
+        - domain_name
+        - Total count
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: STACKED_COLUMN
+        chart_columns:
+        - column_id: country
+        - column_id: domain_name
+        - column_id: Total count
+        axis_configs:
+        - x:
+          - domain_name
+          "y":
+          - Total count
+          color:
+          - country
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"axisProperties\": [{\"id\": \"5de30da5-7e17-4e26-a336-e2cea0cb13cb\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total count\"],\"isOpposite\": false}},{\"id\": \"49fbeb61-8e08-4c2e-aaec-034d2fbd248b\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"domain_name\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total count\",\"color\": \"#2E75F0\"},{\"serieName\": \"{null}\",\"color\": \"#FFA97E\"},{\"serieName\": \"australia\",\"color\": \"#FF8142\"},{\"serieName\": \"brazil\",\"color\": \"#B094F8\"},{\"serieName\": \"bulgaria\",\"color\": \"#8C62F5\"},{\"serieName\": \"croatia\",\"color\": \"#049160\"},{\"serieName\": \"czechia\",\"color\": \"#56D3A8\"},{\"serieName\": \"germany\",\"color\": \"#06BF7F\"},{\"serieName\": \"greece\",\"color\": \"#BF982A\"},{\"serieName\": \"hong kong\",\"color\": \"#FCD977\"},{\"serieName\": \"indonesia\",\"color\": \"#FCC838\"},{\"serieName\": \"iran\",\"color\": \"#369FAA\"},{\"serieName\": \"israel\",\"color\": \"#82DFE9\"},{\"serieName\": \"netherlands\",\"color\": \"#48D1E0\"},{\"serieName\": \"switzerland\",\"color\": \"#2359B6\"},{\"serieName\": \"taiwan\",\"color\": \"#71A1F4\"},{\"serieName\": \"united states\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: f5b9612f-5bcc-4001-9d18-0f3b14bacc6d
+  - id: Viz_2
+    answer:
+      name: Top 10 bailiwicks that pose a threat
+      tables:
+      - id: silver_dns
+        name: silver_dns
+      search_query: "[bailiwick] [count] top 10"
+      answer_columns:
+      - name: Total count
+      - name: bailiwick
+      table:
+        table_columns:
+        - column_id: bailiwick
+          show_headline: false
+        - column_id: Total count
+          show_headline: false
+        ordered_column_ids:
+        - bailiwick
+        - Total count
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: bailiwick
+        - column_id: Total count
+        axis_configs:
+        - x:
+          - bailiwick
+          "y":
+          - Total count
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"axisProperties\": [{\"id\": \"2c9e6e35-44d4-4c6c-8a4e-1322d738f30d\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total count\"],\"isOpposite\": false}},{\"id\": \"1d7b53f8-11b3-4293-9a46-03f1f81af101\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"bailiwick\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total count\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 88aba3b5-6c35-4460-9e12-b66850518847
+  - id: Viz_3
+    answer:
+      name: bailiwick to domain name mapping
+      tables:
+      - id: silver_dns
+        name: silver_dns
+      search_query: "[bailiwick] [domain_name]"
+      answer_columns:
+      - name: bailiwick
+      - name: domain_name
+      table:
+        table_columns:
+        - column_id: bailiwick
+          show_headline: false
+        - column_id: domain_name
+          show_headline: false
+        ordered_column_ids:
+        - bailiwick
+        - domain_name
+        client_state: ""
+      chart:
+        type: SCATTER
+        chart_columns:
+        - column_id: bailiwick
+        - column_id: domain_name
+        axis_configs:
+        - x:
+          - bailiwick
+          "y":
+          - domain_name
+        client_state: ""
+      display_mode: TABLE_MODE
+    viz_guid: f98b3f10-387c-4e2f-958d-f7567cf10983
+  - id: Viz_4
+    answer:
+      name: "dateadded, threat, reporter, domain, url"
+      tables:
+      - id: silver_threat_feeds
+        name: silver_threat_feeds
+      search_query: "[dateadded] [threat] [reporter] [domain] [url]"
+      answer_columns:
+      - name: url
+      - name: domain
+      - name: threat
+      - name: dateadded
+      - name: reporter
+      table:
+        table_columns:
+        - column_id: dateadded
+          show_headline: false
+        - column_id: threat
+          show_headline: false
+        - column_id: reporter
+          show_headline: false
+        - column_id: domain
+          show_headline: false
+        - column_id: url
+          show_headline: false
+        ordered_column_ids:
+        - dateadded
+        - threat
+        - reporter
+        - domain
+        - url
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"widthState\": [{\"columnId\": \"url\",\"width\": 435.0}]}"
+      chart:
+        type: SCATTER
+        chart_columns:
+        - column_id: dateadded
+        - column_id: threat
+        - column_id: reporter
+        - column_id: domain
+        - column_id: url
+        axis_configs:
+        - x:
+          - url
+          "y":
+          - dateadded
+          color:
+          - threat
+        client_state: ""
+      display_mode: TABLE_MODE
+    viz_guid: aad35fb2-362e-4a66-bb1a-d935a549802e
+  - id: Viz_5
+    answer:
+      name: Twisted domain brand
+      tables:
+      - id: silver_twisted_domain_brand
+        name: silver_twisted_domain_brand
+      search_query: "[dnstwisted_domain] [domain] [PERMUTATIONTYPE] [meta]"
+      answer_columns:
+      - name: dnstwisted_domain
+      - name: PERMUTATIONTYPE
+      - name: meta
+      - name: domain
+      table:
+        table_columns:
+        - column_id: dnstwisted_domain
+          show_headline: false
+        - column_id: domain
+          show_headline: false
+        - column_id: PERMUTATIONTYPE
+          show_headline: false
+        - column_id: meta
+          show_headline: false
+        ordered_column_ids:
+        - dnstwisted_domain
+        - domain
+        - PERMUTATIONTYPE
+        - meta
+        client_state: ""
+      chart:
+        type: SCATTER
+        chart_columns:
+        - column_id: dnstwisted_domain
+        - column_id: domain
+        - column_id: PERMUTATIONTYPE
+        - column_id: meta
+        axis_configs:
+        - x:
+          - dnstwisted_domain
+          "y":
+          - domain
+          color:
+          - PERMUTATIONTYPE
+        client_state: ""
+      display_mode: TABLE_MODE
+    viz_guid: 91cd7cfd-660d-40f6-be7d-964b160a4e92
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      size: MEDIUM

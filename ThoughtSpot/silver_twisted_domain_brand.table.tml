@@ -1,0 +1,33 @@
+guid: 2ff961b6-c069-4830-8a13-5074f574cce9
+table:
+  name: silver_twisted_domain_brand
+  db: hive_metastore
+  schema: jingting_lu_dns
+  db_table: silver_twisted_domain_brand
+  connection:
+    name: Databricks-DNS
+  columns:
+  - name: PERMUTATIONTYPE
+    db_column_name: PERMUTATIONTYPE
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: domain
+    db_column_name: domain
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: meta
+    db_column_name: meta
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: dnstwisted_domain
+    db_column_name: dnstwisted_domain
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR

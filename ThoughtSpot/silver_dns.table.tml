@@ -1,0 +1,99 @@
+guid: c86ee7b0-5b2f-4737-a99d-8e3bc2580da1
+table:
+  name: silver_dns
+  db: hive_metastore
+  schema: jingting_lu_dns
+  db_table: silver_dns
+  connection:
+    name: Databricks-DNS
+  columns:
+  - name: rrname
+    db_column_name: rrname
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: rrtype
+    db_column_name: rrtype
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: time_first
+    db_column_name: time_first
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: time_last
+    db_column_name: time_last
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: count
+    db_column_name: count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: bailiwick
+    db_column_name: bailiwick
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: rdata
+    db_column_name: rdata
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: rdatastr
+    db_column_name: rdatastr
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: ip_address
+    db_column_name: ip_address
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: city
+    db_column_name: city
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: country
+    db_column_name: country
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: country_code
+    db_column_name: country_code
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: ioc
+    db_column_name: ioc
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: domain_name
+    db_column_name: domain_name
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR

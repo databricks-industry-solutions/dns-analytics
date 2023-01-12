@@ -1,0 +1,63 @@
+guid: dc205506-1d4c-416a-9fb1-865a5d4687d8
+table:
+  name: silver_threat_feeds
+  db: hive_metastore
+  schema: jingting_lu_dns
+  db_table: silver_threat_feeds
+  connection:
+    name: Databricks-DNS
+  columns:
+  - name: id
+    db_column_name: id
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: dateadded
+    db_column_name: dateadded
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: url
+    db_column_name: url
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: url_status
+    db_column_name: url_status
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: threat
+    db_column_name: threat
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: tags
+    db_column_name: tags
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: urlhaus_link
+    db_column_name: urlhaus_link
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: reporter
+    db_column_name: reporter
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: domain
+    db_column_name: domain
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
