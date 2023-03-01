@@ -76,7 +76,7 @@ spark.conf.set("spark.sql.execution.arrow.pyspark.enabled", "true")
 # MAGIC         return ext.domain
 # MAGIC 
 # MAGIC #The next three lines are registering our user defined functions(UDF) in the Databricks runtime environment 
-# MAGIC registered_domain_extract = spark.udf.register("registred_domain_extract", registered_domain_extract)
+# MAGIC registered_domain_extract = spark.udf.register("registered_domain_extract", registered_domain_extract)
 # MAGIC domain_extract_udf = spark.udf.register("domain_extract", domain_extract)
 
 # COMMAND ----------

@@ -101,7 +101,7 @@ dns_stream_iocs = spark.sql("Select * from dns_latest_stream  where isioc = 'ioc
 # MAGIC ## 7. Agent Tesla
 # MAGIC Success!!! 
 # MAGIC - We used the DGA detection model on streaming DNS events, 
-# MAGIC - Identified a supsicious domain (ioc) in our DNS logs, 
+# MAGIC - Identified a suspicious domain (ioc) in our DNS logs, 
 # MAGIC - Enriched the ioc with URLHaus
 # MAGIC - We can we can see that it this DGA domain is serving up agent tesla
 

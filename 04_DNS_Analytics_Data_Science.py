@@ -75,7 +75,7 @@ dbutils.fs.cp(f'{get_default_path()}/datasets/dga_domains_header.txt', f'file:{f
 
 # For big datasets we'll use Koalas!
 dga_dataframe = pd.read_csv(file_location, header=0);
-# We noticed that the blacklist values just differ by captilization or .com/.org/.info
+# We noticed that the blacklist values just differ by capitalization or .com/.org/.info
 dga_dataframe['domain'] = dga_dataframe.applymap(lambda x: x.split('.')[0].strip().lower())
 
 # It's possible we have NaNs from blanklines or whatever
@@ -194,7 +194,7 @@ print(all_domains['class'].value_counts())
 
 #Labelling the domains based on weirdness 
 # Using ML runtime, my packages come pre-installed
-# Using ML flow, we can track our expirements as we iterate
+# Using ML flow, we can track our experiments as we iterate
 
 from sklearn.model_selection import train_test_split
 clf = sklearn.ensemble.RandomForestClassifier(n_estimators=20) # Trees in the forest
@@ -266,7 +266,7 @@ except:
   client.create_registered_model(model_name)
 
 model_version = client.create_model_version(model_name, f"dbfs:{model_path}", run.info.run_id, description="DGA detection model")
-print(f"Model is registerd with name: {model_name}, version: {model_version.version}")
+print(f"Model is registered with name: {model_name}, version: {model_version.version}")
 # Uncomment if you want to promote this version into Staging
 # client.transition_model_version_stage(name=model_name, version=model_version.version, stage="Staging")
 

@@ -135,7 +135,7 @@ display(threat_feeds_raw)
 
 # COMMAND ----------
 
-# We create a new enrched view by extracting the domain name from the URL using the domain_extractor user defined function from the previous section.
+# We create a new enriched view by extracting the domain name from the URL using the domain_extractor user defined function from the previous section.
 threat_feeds_raw.createOrReplaceTempView("threat_feeds_raw")
 threat_feeds_enriched_df = spark.sql("""
   select *, domain_extract(url) as domain
@@ -180,7 +180,7 @@ display(threat_feeds_enriched_df)
 # COMMAND ----------
 
 # NOTE: domain_dnstwists.csv needs to be created outside of this notebook, using instructions from dnstwist. 
-# Load the domain_dnstwists.csv into a dataframe, brand_domains_monitored_raw. Note the csv and header, true opetions.
+# Load the domain_dnstwists.csv into a dataframe, brand_domains_monitored_raw. Note the csv and header, true options.
 brand_domains_monitored_raw_df = spark.read.csv(f"{get_default_path()}/datasets/domains_dnstwists.csv", header=True) 
 
 # COMMAND ----------
@@ -197,7 +197,7 @@ brand_domains_monitored_raw_df.createOrReplaceTempView("brand_domains_monitored_
 
 # Extract the domain names using the UDF we created at Cmd 9 of this notebook.
 # Create a new table with the dnstwist extracted domains. New column dnstwisted_domain
-# The hardcoded ">=2" is there to accomodate for potential empty domain fileds
+# The hardcoded ">=2" is there to accommodate for potential empty domain fields
 brand_domains_monitored_enriched_df = spark.sql("""
   select *, domain_extract(domain) as dnstwisted_domain
   from brand_domains_monitored_raw
