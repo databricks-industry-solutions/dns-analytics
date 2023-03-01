@@ -27,7 +27,7 @@
 # COMMAND ----------
 
 # MAGIC %sql
-# MAGIC -- ioc is a field we've created as a result of running the DGA model. If the ioc field has a value of ioc, it means that the DGA model has determeined the domain to be an ioc (indicator of compromise)
+# MAGIC -- ioc is a field we've created as a result of running the DGA model. If the ioc field has a value of ioc, it means that the DGA model has determined the domain to be an ioc (indicator of compromise)
 # MAGIC -- The query below is for a total count of rows where the DGA algorithm has detected an ioc. But excludes an domains that have the string 'ip' in it and has a domain name length of more than 10 characters
 # MAGIC select count(*), domain_name, country 
 # MAGIC   from silver_dns 
