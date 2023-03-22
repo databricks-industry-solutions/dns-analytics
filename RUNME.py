@@ -43,7 +43,7 @@ job_json = {
             {
                 "job_cluster_key": "dns_cluster",
                 "notebook_task": {
-                     "notebook_path": f"00_Shared_Include"
+                     "notebook_path": f"00_README"
                 },
                 "task_key": "dns_01"
             },

@@ -12,7 +12,7 @@
 
 # COMMAND ----------
 
-# MAGIC %run ./00_Shared_Include
+# MAGIC %run ./util/Shared_Include
 
 # COMMAND ----------
 
